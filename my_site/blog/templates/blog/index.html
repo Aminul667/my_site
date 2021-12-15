@@ -1,9 +1,54 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
     My Blog
 {% endblock %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+
 {% block content %}
-    <h1>Welcome to my blog</h1>
+    <header id="main-navigation">
+    <h1><a href="">Rahat' Blog</a></h1>
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+    </header>
+
+    <section id="welcome">
+    <header>
+        <img src="" alt="The author of this blog" />
+        <h1>Rahat's Blog</h1>
+    </header>
+    <p>Hi, I am Rahat and I like to blog about math and tech.</p>
+    </section>
+
+    <section id="latest-posts">
+    <h2>My Latest Thoughts</h2>
+    <ul>
+        <li>
+        <article class="post">
+            <a href="">
+            <img src="" alt="Mountain Hiking" />
+            <div class="post__content">
+                <h3>Mountain Hiking</h3>
+                <p>There is nothing to compare with hicking!</p>
+            </div>
+            </a>
+        </article>
+        </li>
+    </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p>
+            I love programming. I love to healp others and to explore techonology.
+        </p>
+        <p>
+            My gole is to keep growing on developing my skolls and learning new things.
+        </p>
+    </section>
 {% endblock %}
